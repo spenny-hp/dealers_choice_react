@@ -3,12 +3,13 @@ const path = require("path");
 const { conn } = require("./db");
 const app = express();
 
+app.use('/dist', express.static(path.join(__dirname, "..", "dist")))
+app.use('/public', express.static(path.join(__dirname, "..", "public")))
 app.use("/api", require("./api"));
-app.use(express.static(path.join(__dirname, '..', 'public')))
 
-app.get('/', (req, res, next) => {
-  res.sendFile(path.join(__dirname,'client', 'index.html'))
-})
+app.get("/", (req, res, next) => {
+  res.sendFile(path.join(__dirname, "..", "src", "index.html"));
+});
 
 async function init() {
   await conn.sync();
@@ -17,7 +18,7 @@ async function init() {
     console.log(
       `App listening on port ${port}
       
-      http://localhost/${port}
+      http://localhost:${port}/
       `
     )
   );

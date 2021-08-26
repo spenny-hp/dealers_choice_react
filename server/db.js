@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const { STRING, INTEGER } = Sequelize.DataTypes;
 
-const data = require("./nyc_restaurants.json");
+const data = require("../nyc_restaurants.json");
 
 const tempBoroughs = data.reduce((acc, val) => {
   acc[val.borough] = acc[val.borough] || 0;

@@ -8,7 +8,7 @@
     "seed": "node bin/seed.js",
     "build": "webpack",
     "build:dev": "npm run build -- --watch --mode=development",
-    "start:dev": "npm run build:dev & nodemon server/server.js --ignore dist/ --ignore src/"
+    "start:dev": "npm run build:dev & nodemon server/index --ignore dist/ --ignore src/"
   },
   "repository": {
     "type": "git",
@@ -23,17 +23,22 @@
   "homepage": "https://github.com/spenny-hp/dealers_choice_react#readme",
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0"
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1",
+    "nodemon": "^2.0.12",
     "pg": "^8.7.1",
+    "regenerator-runtime": "^0.13.9",
     "sequelize": "^6.6.5"
   }
 }

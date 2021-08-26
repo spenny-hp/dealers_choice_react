@@ -1,0 +1,58 @@
+#restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.restaurant {
+    width: calc(100%/3 - 6px);
+    border: 1px solid black;
+    text-align: center;
+    padding-bottom: 1rem;
+    background-color: cornsilk;
+}
+
+.restaurant > h3 {
+    text-decoration: underline;
+    color: cornflowerblue;
+}
+
+#header {
+    text-align: center;
+    background-color: cornsilk;
+    height: 3rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+
+nav > span {
+    width: 15%;
+    height: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    border: black 1px solid;
+    color: cornflowerblue;
+    background-color: cornsilk;
+    text-decoration: underline;
+}
+
+#inputRestaurant {
+    width: 50%;
+    padding-bottom: 2rem;
+}
+
+p, label {
+    font-weight: bold;
+}
+
+table {
+    padding: 1rem;
+    border: black solid 1px
+}
